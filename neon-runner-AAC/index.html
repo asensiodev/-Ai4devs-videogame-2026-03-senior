@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Runner</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <h1>Neon Runner</h1>
+        <div class="hud__stats">
+          <span>Puntuacion: <strong id="score">0</strong></span>
+          <span>Velocidad: <strong id="speed">1.0x</strong></span>
+        </div>
+      </header>
+
+      <section
+        id="game"
+        class="game"
+        tabindex="0"
+        role="application"
+        aria-label="Juego runner controlado por teclado"
+      >
+        <div id="player" class="player" aria-hidden="true"></div>
+      </section>
+
+      <section class="panel">
+        <p id="message" class="message" aria-live="polite">
+          Pulsa ESPACIO o FLECHA ARRIBA para empezar
+        </p>
+        <p class="controls">
+          Controles: <kbd>Espacio</kbd> / <kbd>↑</kbd> para saltar · <kbd>R</kbd> para reiniciar
+        </p>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
